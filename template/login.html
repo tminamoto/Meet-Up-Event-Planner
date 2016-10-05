@@ -1,0 +1,43 @@
+  <div ng-controller="authCtrl" layout="row" layout-align="center center" ng-cloak>
+    <div class="login">
+      <form name="clientLogin">
+        <h2>Meet-Up Event Planner Login</h2>
+        <br />
+        <md-input-container class="md-icon-float md-block">
+          <label>Email</label>
+          <md-icon class="material-icons">mail_outline</md-icon>
+          <input autofocus="true" ng-model="email" name="userEmail" type="email" ng-required="true">
+          <div ng-messages="clientLogin.userEmail.$error" role="alert">
+            <div ng-message="required">Your email is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label>Password</label>
+          <md-icon class="material-icons">lock_outline</md-icon>
+          <input ng-model="password" type="password" ng-required="true" name="userPassword">
+          <div ng-messages="clientLogin.userPassword.$error">
+            <div ng-message="required">Your password is required.</div>
+          </div>
+        </md-input-container>
+<!-- 
+        <div flex-gt-sm="50">
+          <md-checkbox ng-model="rememberme" aria-label="Remember Me">
+          Remember Me
+          </md-checkbox>
+        </div>
+ -->
+        <br />
+        <md-button class="md-raised md-primary" ng-click="signIn()">Login</md-button>
+        <br />
+        <md-button class="md-primary md-hue-1 size1" ui-sref="register">register</md-button>
+      </form> 
+      <footer>
+        <div class="footer-copyright">
+          <div class="container">
+            © 2016 Takao Minamoto
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
