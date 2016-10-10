@@ -23,7 +23,9 @@ Routing Structure
 1. registration
 2. login screen
 3. event top screen
+
 3-a. event creation screen
+
 3-b. event viewer screen
 
 * 3-a and 3-b is sub-routing screen of event top screen
