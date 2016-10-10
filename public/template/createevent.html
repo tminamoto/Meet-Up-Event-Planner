@@ -1,21 +1,14 @@
   <div layout="row" layout-align="center center" ng-cloak>
-    <div class="login">
-      <form name="eventCreation">
+      <form name="eventCreation" class="event">
         <h2>Create Event</h2>
         <br />
         <md-input-container class="md-icon-float md-block">
           <label>Evnet Name</label>
-          <input autofocus="true" ng-model="neweventname" type="text" ng-required="true" name="eventName">
-          <div ng-messages="eventCreation.eventName.$error">
-            <div ng-message="required">Event name is required.</div>
-          </div>
+          <input autofocus="true" ng-model="neweventname" type="text" name="eventName">
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
           <label>Type of Event</label>
-          <input ng-model="newtypeofevent" type="text" ng-required="true" name="typeOfEvent">
-          <div ng-messages="eventCreation.typeOfEvent.$error">
-            <div ng-message="required">Type of event is required.</div>
-          </div>
+          <input ng-model="newtypeofevent" type="text" name="typeOfEvent">
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
           <label>Event host</label>
@@ -24,14 +17,17 @@
         <md-input-container class="md-icon-float md-block">
           <label>Event start date and time</label>
           <input ng-model="neweventstartdateandtime" type="text" name="eventStartDateAndTime">
+          <div class="hint">MM/DD/YYYY HH:MI</div>
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
           <label>Event end date and time</label>
           <input ng-model="neweventenddateandtime" type="text" name="eventEndDateAndTime">
+          <div class="hint">MM/DD/YYYY HH:MI</div>
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
           <label>Guest list</label>
           <input ng-model="neweventguestlist" type="text" name="eventGuestList">
+          <div class="hint">Please input each guest name w/ comma</div>
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
           <label>Location</label>
@@ -44,5 +40,4 @@
         <br />
         <md-button class="md-raised md-primary" ng-click="createEvent()">Create</md-button>
       </form> 
-    </div>
   </div>

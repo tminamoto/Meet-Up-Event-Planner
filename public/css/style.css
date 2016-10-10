@@ -14,6 +14,10 @@ form {
   border: 1px solid #ebebeb;
 }
 
+form.event {
+  width: 500px;
+}
+
 md-input-container {
    text-align: left;
 }

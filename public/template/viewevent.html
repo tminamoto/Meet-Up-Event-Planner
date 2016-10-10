@@ -1,0 +1,44 @@
+<div class="gridListdemoBasicUsage">
+  <div class='md-padding' layout="row" layout-wrap>
+    <md-card style="width: 300px;"  ng-repeat="eventdt in eventdata">
+      <md-card-content>
+        <md-input-container class="md-icon-float md-block">
+          <label>Event Registerer</label>
+          <input ng-model="eventdt.neweventname" type="text" ng-readonly="true">
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label>Event Host</label>
+          <input ng-model="eventdt.neweventhost" type="text" ng-readonly="true">
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label>Event Type</label>
+          <input ng-model="eventdt.newtypeofevent" type="text" ng-readonly="true">
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label>Event Start Date and Time</label>
+          <input ng-model="eventdt.neweventstartdateandtime" type="text" ng-readonly="true">
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label>Event End Date and Time</label>
+          <input ng-model="eventdt.neweventenddateandtime" type="text" ng-readonly="true">
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label>Event Guest List</label>
+          <input ng-model="eventdt.neweventguestlist" type="text" ng-readonly="true">
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label>Event Location</label>
+          <input ng-model="eventdt.neweventlocation" type="text" ng-readonly="true">
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label>Event Message</label>
+          <input ng-model="eventdt.neweventmessage" type="text" ng-readonly="true">
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label>Event Registerer</label>
+          <input ng-model="eventdt.username" type="text" ng-readonly="true">
+        </md-input-container>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>

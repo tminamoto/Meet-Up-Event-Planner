@@ -63,8 +63,6 @@ myApp.controller("eventCtrl", ["Auth", "$scope", "$state", "eventData", function
 
   };
 
-
-
   function UndefinedCheck(value) {
 
     if (angular.isUndefined(value)) {

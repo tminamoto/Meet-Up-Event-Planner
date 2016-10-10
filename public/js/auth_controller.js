@@ -26,11 +26,13 @@ myApp.controller("authCtrl", function($scope, $firebaseAuth, $state) {
 
     $scope.message = null;
     $scope.error = null;
+    var username = $scope.newname;
+    var company = $scope.newcompany;
 
     // Create a new user
     auth.$createUserWithEmailAndPassword($scope.newemail, $scope.newpassword)
     .then(function(firebaseUser) {
-      updateProfile(firebaseUser);
+      updateProfile(firebaseUser, username, company);
       $scope.message = "User created with uid: " + firebaseUser.uid;
       console.log("User created with uid: " + firebaseUser.uid);
       $state.go("login");
@@ -40,13 +42,13 @@ myApp.controller("authCtrl", function($scope, $firebaseAuth, $state) {
     });
   };
 
-  function updateProfile(user){
+  function updateProfile(user, username, company){
 
     auth.$onAuthStateChanged(function(user) {
       if (user) {
         user.updateProfile({
-          displayName: "Jane Q. User",
-          photoURL: "https://example.com/jane-q-user/profile.jpg"
+          displayName: username,
+          company: company
         }).then(function() {
         // Update successful.
         }, function(error) {
