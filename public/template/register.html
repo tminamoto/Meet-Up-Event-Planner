@@ -4,22 +4,17 @@
         <h2>Meet-Up Event Planner Registration</h2>
         <br />
         <md-input-container class="md-icon-float md-block">
-          <label>Name</label>
+          <label for="userName">Name</label>
           <md-icon class="material-icons">face</md-icon>
-          <input autofocus="true" ng-model="newname" type="text" ng-required="true" name="userName">
+          <input ng-model="newname" type="text" ng-required="true" id="userName" name="userName" autofocus>
           <div ng-messages="clientLogin.userName.$error">
             <div ng-message="required">Your name is required.</div>
           </div>
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
-          <label>Company</label>
-          <md-icon class="material-icons">business</md-icon>
-          <input autofocus="true" ng-model="newcompany" type="text" name="userCompany">
-        </md-input-container>
-        <md-input-container class="md-icon-float md-block">
-          <label>Email</label>
+          <label for="userEmail">Email</label>
           <md-icon class="material-icons">mail_outline</md-icon>
-          <input ng-model="newemail" name="userEmail" type="email" ng-required="true" ng-pattern="/^.+@.+\..+$/">
+          <input ng-model="newemail" id="userEmail" name="userEmail" type="email" ng-required="true" ng-pattern="/^.+@.+\..+$/">
           <div ng-messages="clientLogin.userEmail.$error" role="alert">
             <div ng-message-exp="['required', 'pattern']">
               Your email is required and must look like an e-mail address.
@@ -27,10 +22,9 @@
           </div>
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
-          <label>Password</label>
+          <label for="userPassword">Password</label>
           <md-icon class="material-icons">lock_outline</md-icon>
-          <input ng-model="newpassword" type="password" ng-required="true" name="userPassword" >
-          <input ng-model="newpassword" type="password" ng-required="true" name="userPassword" ng-minlength="10" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[a-z]).*/" >
+          <input ng-model="newpassword" type="password" ng-required="true" id="userPassword" name="userPassword" ng-minlength="10" ng-pattern="/^(?=.*[A-Z])(?=.*\d)(?=.*[a-z]).*/" >
           <div ng-messages="clientLogin.userPassword.$error">
             <div ng-message-exp="['required', 'pattern']">
               Your password must include at least 1 capital character, 1 lower character and 1 number.
@@ -38,17 +32,15 @@
             <div ng-message="minlength">Password must be over 6 characters/numbers.</div>
           </div>
         </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label for="userCompany">Company</label>
+          <md-icon class="material-icons">business</md-icon>
+          <input ng-model="newcompany" type="text" id="userCompany" name="userCompany">
+        </md-input-container>
         <br />
-        <md-button class="md-raised md-primary" ng-click="createUser()">Register</md-button>
+        <md-button class="md-raised md-primary" ng-click="createUser()" ng-disabled="projectForm.$invalid">Register</md-button>
         <br />
         <md-button class="md-primary md-hue-1 size1" ui-sref="login">login</md-button>
       </form> 
-      <footer>
-        <div class="footer-copyright">
-          <div class="container">
-            © 2016 Takao Minamoto
-          </div>
-        </div>
-      </footer>
     </div>
   </div>
