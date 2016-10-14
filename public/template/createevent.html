@@ -25,19 +25,19 @@
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
           <label for="eventStartDateAndTime">Event start date and time</label>
-          <input ng-model="neweventstartdateandtime" type="datetime-local" ng-required="true" id="eventStartDateAndTime" name="eventStartDateAndTime">
-          <div class="hint">mm/dd/yyyy --:-- --</div>
+          <input ng-model="neweventstartdateandtime" type="datetime-local" ng-required="true" id="eventStartDateAndTime" name="eventStartDateAndTime" ng-change="checkTimeErr()" >
           <div ng-messages="eventCreation.eventStartDateAndTime.$error">
             <div ng-message="required">Event start date and time is required.</div>
           </div>
+          <div class="showerror">{{errMessageStart}}</div>
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
           <label for="eventEndDateAndTime">Event end date and time</label>
-          <input ng-model="neweventenddateandtime" type="datetime-local" ng-required="true" id="eventEndDateAndTime" name="eventEndDateAndTime">
-          <div class="hint">mm/dd/yyyy --:-- --</div>
+          <input ng-model="neweventenddateandtime" type="datetime-local" ng-required="true" id="eventEndDateAndTime" name="eventEndDateAndTime" ng-change="checkTimeErr()" >
           <div ng-messages="eventCreation.eventEndDateAndTime.$error">
             <div ng-message="required">Event end date and time is required.</div>
           </div>
+          <div class="showerror">{{errMessageEnd}}</div>
         </md-input-container>
         <md-input-container class="md-icon-float md-block">
           <label for="eventGuestList">Guest list</label>

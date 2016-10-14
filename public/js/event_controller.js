@@ -13,6 +13,7 @@ myApp.factory("eventData", ["$firebaseArray",
 myApp.controller("eventCtrl", ["Auth", "$scope", "$state", "eventData", function(Auth, $scope, $state, eventData) {
 
   var auth = Auth;
+  var errorchecker = "";
   $scope.eventdata = eventData;
 
   auth.$onAuthStateChanged(function(user) {
@@ -37,6 +38,10 @@ myApp.controller("eventCtrl", ["Auth", "$scope", "$state", "eventData", function
 
   $scope.createEvent = function (){
     
+    if (errorchecker = 0) {
+      return false;
+    }
+
     var username = $scope.username;
     var neweventname = UndefinedCheck($scope.neweventname);
     var newtypeofevent = UndefinedCheck( $scope.newtypeofevent);
@@ -52,14 +57,42 @@ myApp.controller("eventCtrl", ["Auth", "$scope", "$state", "eventData", function
       neweventname  : neweventname,
       newtypeofevent: newtypeofevent,
       neweventhost : neweventhost,
-      neweventstartdateandtime : neweventstartdateandtime,
-      neweventenddateandtime : neweventenddateandtime,
+      neweventstartdateandtime : neweventstartdateandtime.toString(),
+      neweventenddateandtime : neweventenddateandtime.toString(),
       neweventguestlist : neweventguestlist,
       neweventlocation : neweventlocation,
       neweventmessage: neweventmessage
     });
 
     $state.go("event.view");
+
+  };
+
+  $scope.checkTimeErr = function() {
+
+        var errMessageStart = "";
+        var errMessageEnd = "";
+        var startDate = $scope.neweventstartdateandtime;
+        var endDate = $scope.neweventenddateandtime;
+        var curDate = new Date();
+
+        if(new Date(startDate) < curDate){
+          $scope.errMessageStart = "Start date should not be before today.";
+          errorchecker = 1;
+          return false;
+        } else {
+          $scope.errMessageStart = "";
+        }
+        
+        if(new Date(startDate) > new Date(endDate)){
+          $scope.errMessageEnd = "End date should be greater than start date.";
+          errorchecker = 1;
+          return false;
+        } else {
+          $scope.errMessageEnd = "";
+        }
+
+        errorchecker = 0;
 
   };
 

@@ -3,7 +3,21 @@
 [debug] CLI Version:  3.0.8
 [debug] Platform:     win32
 [debug] Node Version: v6.0.0
-[debug] Time:         Mon Oct 10 2016 19:05:39 GMT-0700 (Pacific Daylight Time)
+[debug] Time:         Thu Oct 13 2016 23:16:59 GMT-0700 (Pacific Daylight Time)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[info] Starting Firebase development server...
+[info] 
+[info] Project Directory: C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\p1
+[info] Public Directory: public
+[info] 
+[info] Server listening at: http://localhost:5000
+[debug] ----------------------------------------------------------------------
+[debug] Command:      C:\Program Files (x86)\Nodist\v\nodev6.0.0\node.exe C:\Program Files (x86)\Nodist\bin\node_modules\firebase-tools\bin\firebase serve
+[debug] CLI Version:  3.0.8
+[debug] Platform:     win32
+[debug] Node Version: v6.0.0
+[debug] Time:         Fri Oct 14 2016 13:53:31 GMT-0700 (Pacific Daylight Time)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [info] Starting Firebase development server...
