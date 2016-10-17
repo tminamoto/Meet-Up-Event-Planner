@@ -1,14 +1,14 @@
 "use strict";
 
 myApp.run(["$rootScope", "$state", function($rootScope, $state) {
-  $rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {
+  $rootScope.$on("$stateChangeError", ["event", "toState", "toParams", "fromState", "fromParams", "error", function(event, toState, toParams, fromState, fromParams, error) {
 
 //    if (error === "AUTH_REQUIRED") {
     if (error) {
       $state.go("login");
     }
 
-  });
+  }]);
 
 }]);
 

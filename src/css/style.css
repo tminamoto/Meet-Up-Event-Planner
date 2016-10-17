@@ -1,0 +1,95 @@
+body {
+  background: #9f9;
+}
+
+.login {
+  text-align: center;
+}
+
+form {
+  width: 330px;
+  margin: 4em auto;
+  padding: 3em 2em 2em 2em;
+  background: #fafafa;
+  border: 1px solid #ebebeb;
+}
+
+form.event {
+  width: 500px;
+}
+
+md-input-container {
+   text-align: left;
+}
+
+.md-button {
+   width: 300px;
+}
+
+.md-button.size1 {
+   width: 50px;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+ 
+  /* WebKit support */
+  -webkit-font-smoothing: antialiased;
+
+  /* Chrome, Safari support */
+  text-rendering: optimizeLegibility;
+ 
+  /* Firefox support */
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* IE support */
+  font-feature-settings: 'liga';
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.toolbarBasicUsage md-toolbar md-icon.md-default-theme {
+  color: white; }
+
+.gridListdemoBasicUsage md-grid-list {
+  margin: 8px;
+}
+
+.gridListdemoBasicUsage .gray {
+  background: #f5f5f5;
+}
+
+.gridListdemoBasicUsage md-grid-tile {
+  transition: all 400ms ease-out 50ms;
+}
+
+.showerror {
+ position: absolute;
+ left: 2px;
+ right: auto;
+ bottom: 7px;
+ /* Copy styles from ng-messages */
+ font-size: 12px;
+ line-height: 14px;
+ transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+ /* Set our own color */
+ color: red;
+}
+

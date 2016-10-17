@@ -84,7 +84,7 @@ myApp.controller("eventCtrl", ["Auth", "$scope", "$state", "eventData", function
           $scope.errMessageStart = "";
         }
         
-        if(new Date(startDate) > new Date(endDate)){
+        if(new Date(startDate) >= new Date(endDate)){
           $scope.errMessageEnd = "End date should be greater than start date.";
           errorchecker = 1;
           return false;

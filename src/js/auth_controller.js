@@ -1,6 +1,6 @@
 "use strict";
 
-myApp.controller("authCtrl", function($scope, $firebaseAuth, $state) {
+myApp.controller("authCtrl", ["$scope", "$firebaseAuth", "$state", function($scope, $firebaseAuth, $state) {
 
   var auth = $firebaseAuth();
  
@@ -60,5 +60,5 @@ myApp.controller("authCtrl", function($scope, $firebaseAuth, $state) {
 
   };
 
-});
+}]);
 

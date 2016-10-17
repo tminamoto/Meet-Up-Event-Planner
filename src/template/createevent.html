@@ -1,0 +1,61 @@
+  <div layout="row" layout-align="center center" ng-cloak>
+      <form name="eventCreation" class="event">
+        <h2>Create Event</h2>
+        <br />
+        <md-input-container class="md-icon-float md-block">
+          <label for="eventName">Evnet Name</label>
+          <input ng-model="neweventname" type="text" ng-required="true" id="eventName" name="eventName" autofocus>
+          <div ng-messages="eventCreation.eventName.$error">
+            <div ng-message="required">Event name is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label for="typeOfEvent">Type of Event</label>
+          <input ng-model="newtypeofevent" type="text" ng-required="true" id="typeOfEvent" name="typeOfEvent">
+          <div ng-messages="eventCreation.typeOfEvent.$error">
+            <div ng-message="required">Type of event is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label for="eventHost">Event host</label>
+          <input ng-model="neweventhost" type="text" ng-required="true" id="eventHost" name="eventHost">
+          <div ng-messages="eventCreation.eventHost.$error">
+            <div ng-message="required">Event host is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label for="eventStartDateAndTime">Event start date and time</label>
+          <input ng-model="neweventstartdateandtime" type="datetime-local" ng-required="true" id="eventStartDateAndTime" name="eventStartDateAndTime" ng-change="checkTimeErr()" >
+          <div ng-messages="eventCreation.eventStartDateAndTime.$error">
+            <div ng-message="required">Event start date and time is required.</div>
+          </div>
+          <div class="showerror">{{errMessageStart}}</div>
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label for="eventEndDateAndTime">Event end date and time</label>
+          <input ng-model="neweventenddateandtime" type="datetime-local" ng-required="true" id="eventEndDateAndTime" name="eventEndDateAndTime" ng-change="checkTimeErr()" >
+          <div ng-messages="eventCreation.eventEndDateAndTime.$error">
+            <div ng-message="required">Event end date and time is required.</div>
+          </div>
+          <div class="showerror">{{errMessageEnd}}</div>
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label for="eventGuestList">Guest list</label>
+          <input ng-model="neweventguestlist" type="text" ng-required="true" id="eventGuestList" name="eventGuestList">
+          <div class="hint">Please separate each guest name w/ comma</div>
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label for="eventLocation">Location</label>
+          <input ng-model="neweventlocation" type="text" id="eventLocation" ng-required="true" name="eventLocation">
+          <div ng-messages="eventCreation.eventLocation.$error">
+            <div ng-message="required">Event location is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container class="md-icon-float md-block">
+          <label for="eventMessage">Optional message</label>
+          <input ng-model="neweventmessage" type="text" id="eventMessage" name="eventMessage">
+        </md-input-container>
+        <br />
+        <md-button class="md-raised md-primary" ng-click="createEvent()" ng-disabled="projectForm.$invalid">Create</md-button>
+      </form> 
+  </div>

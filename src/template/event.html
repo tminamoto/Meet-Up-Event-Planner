@@ -1,0 +1,22 @@
+  <div ng-controller="eventCtrl" class="toolbarBasicUsage" ng-cloak>
+    <md-content>
+
+      <md-toolbar class="md-hue-2">
+        <div class="md-toolbar-tools">
+          <h2>
+            <span>Events</span>
+          </h2>
+          <span flex=""></span>
+          <md-button class="md-primary md-hue-1 size2" ui-sref="event.create">Create</md-button>
+          <md-button class="md-primary md-hue-1 size2" ui-sref="event.view">View</md-button>
+          <span flex=""></span>
+          {{username}}
+          <md-button class="md-primary md-hue-1 size1" ng-click="signout()">Sign Out</md-button>
+        </div>
+      </md-toolbar>
+    <br>
+    <ui-view></ui-view> 
+ 
+   </md-content>
+
+  </div>
